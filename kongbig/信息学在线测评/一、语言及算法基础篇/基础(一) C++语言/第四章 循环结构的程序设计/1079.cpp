@@ -1,16 +1,16 @@
 #include<cstdio>
-#include<cmath>
+#include<math.h>
 using namespace std;
 int main()
 {
-	int n;
-	double sum = 0;
+	int i, n;
+	float a, sum=0;
 	scanf("%d", &n);
-	for (int i = 1; i <= n; i++)
+	for(i = 1; i <= n; i++)
 	{
-		sum += (pow(-1.0, (n - 1)) * 1 / n);
-		printf("%.4lf\n", sum);
+		a = pow(-1, i+1);
+		sum += 1 / (a * i);
 	}
-	
+	printf("%.4f", sum);
 	return 0;
 }
