@@ -536,7 +536,7 @@ char s3[3] = {'A', 'b', 'c'};
 
 
 
-## 函数
+## 函数与递归算法
 
 ```c++
 /*
@@ -573,3 +573,30 @@ void swap(int &a, int &b)
 */
 ```
 
+```c++
+/*
+递归：对自身的调用。
+*/
+
+#include<cstdio>
+using namespace std;
+// 递归求n - 1的阶乘 
+int fac(int n)
+{
+	// 调用函数fac(n - 1)递归求(n - 1)! 
+	return n == 0 ? 1 : n * fac(n - 1);
+}
+int main()
+{
+	int x;
+	scanf("%d", &x);
+	printf("x! = %d", fac(x));
+	return 0;
+}
+```
+执行流程如下：
+
+```mermaid
+graph TD
+	
+```
